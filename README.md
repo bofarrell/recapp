@@ -1,4 +1,7 @@
 recapp
 ======
 
-RECAPP 4th year project
+ 
+open souce use of software
+WebRTC technology
+E-learning outcome
