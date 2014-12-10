@@ -1,0 +1,28 @@
+{
+    "name" : "Screen Capturing",
+    "version" : "6",
+    "manifest_version" : 2,
+    "minimum_chrome_version": "34",
+    "description" : "RECAPP WebRTC screen capturing extension",
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+       "js": [ "content.js" ],
+       "all_frames": true,
+       "run_at": "document_start",
+       "matches": ["https://localhost:3000/*","https://5.79.19.88:3000/*", "*://www.recapp.com/*","http://*/*","https://*/*","http://127.0.0.1:8000/screenshare-bloggeek.html","*://www.webrtc-experiment.com/*"]
+    }],
+    "icons" : {
+        "48" : "logo_icon_128.png"
+    },
+    "permissions": [
+        "desktopCapture"
+
+    ],
+    "web_accessible_resources": [
+        "logo_icon_128.png"
+    ]
+}
